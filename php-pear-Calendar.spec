@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Calendar
+%define		_class		Calendar
 %define		_status		stable
 %define		_pearname	%{_class}
 
