@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - building Calendar data structures (irrespective of output)
 Summary(pl):	%{_pearname} - twierzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
 Name:		php-pear-%{_pearname}
-Version:	0.2
+Version:	0.4
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	673dda064564d2b0ef524866dff1d301
+# Source0-md5:	ec7e262f8873a3a4e1412a87c4032df2
 URL:		http://pear.php.net/package/Calendar/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -53,9 +53,10 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Engine,Month,Table}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Decorator,Engine,Month,Table}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/Decorator/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Decorator
 install %{_pearname}-%{version}/Engine/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Engine
 install %{_pearname}-%{version}/Month/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Month
 install %{_pearname}-%{version}/Table/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Table
@@ -67,10 +68,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/docs/*
 %dir %{php_pear_dir}/%{_class}
+%dir %{php_pear_dir}/%{_class}/Decorator
 %dir %{php_pear_dir}/%{_class}/Engine
 %dir %{php_pear_dir}/%{_class}/Month
 %dir %{php_pear_dir}/%{_class}/Table
 %{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/%{_class}/Decorator/*.php
 %{php_pear_dir}/%{_class}/Engine/*.php
 %{php_pear_dir}/%{_class}/Month/*.php
 %{php_pear_dir}/%{_class}/Table/*.php
