@@ -1,11 +1,10 @@
-# ToDo:
-# - pl summary/description
 %include	/usr/lib/rpm/macros.php
 %define         _class          Calendar
 %define		_status		stable
 %define		_pearname	%{_class}
 
-Summary:	%{_pearname} - class for building Calendar data structures (irrespective of output)
+Summary:	%{_pearname} - building Calendar data structures (irrespective of output)
+Summary(pl):	%{_pearname} - twierzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
 Name:		php-pear-%{_pearname}
 Version:	0.2
 Release:	1
@@ -34,10 +33,20 @@ calendar (e.g. a Chinese Calendar based on lunar cycles).
 
 This class has in PEAR status: %{_status}.
 
-#%description -l pl
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl
+Calendar dostarcza API do tworzenia struktur danych kalendarza. Przy
+u¿yciu prostego iteratora i jego API zapytañ mo¿na ³atwo zbudowaæ
+interfejs u¿ytkownika w oparciu o strukturê danych kalendarza, a
+jednocze¶nie po³±czyæ j± z jakim¶ rodzajem przechowywania danych,
+gdzie trzymane s± informacje o zdarzeniach.
+
+Klasa udostêpnia ró¿ne "silniki" obliczeñ; domy¶lny jest oparty na
+uniksowych timestampach (i jest najszybszy), alternatywny u¿ywa klasy
+PEAR::Date rozszerzaj±cej kalendarz poza ograniczenia timestampów.
+Powinno siê daæ zaimplementowaæ inne silniki dla innych rodzajów
+kalendarzy (np. kalendarza chiñskiego opartego na fazach ksiê¿yca).
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
