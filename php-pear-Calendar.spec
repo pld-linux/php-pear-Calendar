@@ -1,17 +1,17 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Calendar
-%define		_status		stable
+%define		_status		beta
 %define		_pearname	%{_class}
 
 Summary:	%{_pearname} - building Calendar data structures (irrespective of output)
 Summary(pl):	%{_pearname} - twierzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
 Name:		php-pear-%{_pearname}
-Version:	0.5
+Version:	0.5.1
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	0424e27ec8b02b094ebaca3a6b5b50ab
+# Source0-md5:	b4db96f4558d68fdc4425f28a0e7a677
 URL:		http://pear.php.net/package/Calendar/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
