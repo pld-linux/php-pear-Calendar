@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - building Calendar data structures (irrespective of output)
 Summary(pl):	%{_pearname} - twierzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
 Name:		php-pear-%{_pearname}
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	ec7e262f8873a3a4e1412a87c4032df2
+# Source0-md5:	0424e27ec8b02b094ebaca3a6b5b50ab
 URL:		http://pear.php.net/package/Calendar/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
