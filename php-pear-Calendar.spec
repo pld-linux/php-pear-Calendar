@@ -3,11 +3,11 @@
 %define		_status		beta
 %define		_pearname	%{_class}
 
-Summary:	%{_pearname} - building Calendar data structures (irrespective of output)
+Summary:	%{_pearname} - building calendar data structures (irrespective of output)
 Summary(pl):	%{_pearname} - tworzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
 Name:		php-pear-%{_pearname}
 Version:	0.5.2
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -19,7 +19,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Calendar provides an API for building Calendar data structures. Using
+Calendar provides an API for building calendar data structures. Using
 the simple iterator and it's "query" API, a user interface can easily be
 built on top of the calendar data structure, at the same time easily
 connecting it to some kind of underlying data store, where "event"
@@ -67,13 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/docs/*
-%dir %{php_pear_dir}/%{_class}
-%dir %{php_pear_dir}/%{_class}/Decorator
-%dir %{php_pear_dir}/%{_class}/Engine
-%dir %{php_pear_dir}/%{_class}/Month
-%dir %{php_pear_dir}/%{_class}/Table
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/Decorator/*.php
-%{php_pear_dir}/%{_class}/Engine/*.php
-%{php_pear_dir}/%{_class}/Month/*.php
-%{php_pear_dir}/%{_class}/Table/*.php
+%{php_pear_dir}/%{_class}
