@@ -31,7 +31,7 @@ PEAR::Date which extends the calendar past the limitations of Unix
 timestamps. Other engines should be implementable for other types of
 calendar (e.g. a Chinese Calendar based on lunar cycles).
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Calendar dostarcza API do tworzenia struktur danych kalendarza. Przy
