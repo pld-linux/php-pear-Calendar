@@ -1,0 +1,3 @@
+- capitalization fixes, simplified %files
+- rebuild with new PEAR provides/requires scripts
+- release 2
