@@ -4,7 +4,7 @@
 %define		_pearname	%{_class}
 
 Summary:	%{_pearname} - building calendar data structures (irrespective of output)
-Summary(pl):	%{_pearname} - tworzenie struktur danych kalendarza (niezale¿ne od wyj¶cia)
+Summary(pl.UTF-8):   %{_pearname} - tworzenie struktur danych kalendarza (niezaleÅ¼ne od wyjÅ›cia)
 Name:		php-pear-%{_pearname}
 Version:	0.5.3
 Release:	1
@@ -39,24 +39,24 @@ calendar (e.g. a Chinese Calendar based on lunar cycles).
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Calendar dostarcza API do tworzenia struktur danych kalendarza. Przy
-u¿yciu prostego iteratora i jego API zapytañ mo¿na ³atwo zbudowaæ
-interfejs u¿ytkownika w oparciu o strukturê danych kalendarza, a
-jednocze¶nie po³±czyæ j± z jakim¶ rodzajem przechowywania danych,
-gdzie trzymane s± informacje o zdarzeniach.
+uÅ¼yciu prostego iteratora i jego API zapytaÅ„ moÅ¼na Å‚atwo zbudowaÄ‡
+interfejs uÅ¼ytkownika w oparciu o strukturÄ™ danych kalendarza, a
+jednoczeÅ›nie poÅ‚Ä…czyÄ‡ jÄ… z jakimÅ› rodzajem przechowywania danych,
+gdzie trzymane sÄ… informacje o zdarzeniach.
 
-Klasa udostêpnia ró¿ne "silniki" obliczeñ; domy¶lny jest oparty na
-uniksowych timestampach (i jest najszybszy), alternatywny u¿ywa klasy
-PEAR::Date rozszerzaj±cej kalendarz poza ograniczenia timestampów.
-Powinno siê daæ zaimplementowaæ inne silniki dla innych rodzajów
-kalendarzy (np. kalendarza chiñskiego opartego na fazach ksiê¿yca).
+Klasa udostÄ™pnia rÃ³Å¼ne "silniki" obliczeÅ„; domyÅ›lny jest oparty na
+uniksowych timestampach (i jest najszybszy), alternatywny uÅ¼ywa klasy
+PEAR::Date rozszerzajÄ…cej kalendarz poza ograniczenia timestampÃ³w.
+Powinno siÄ™ daÄ‡ zaimplementowaÄ‡ inne silniki dla innych rodzajÃ³w
+kalendarzy (np. kalendarza chiÅ„skiego opartego na fazach ksiÄ™Å¼yca).
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
@@ -65,7 +65,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
