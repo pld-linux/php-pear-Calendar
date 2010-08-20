@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - building calendar data structures (irrespective of output)
 Summary(pl.UTF-8):	%{_pearname} - tworzenie struktur danych kalendarza (niezależne od wyjścia)
 Name:		php-pear-%{_pearname}
-Version:	0.5.4
+Version:	0.5.5
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	602eda9b94b532fbf150c8618eae1bcc
+# Source0-md5:	05d7ceec2efe834857f01963162a2399
 URL:		http://pear.php.net/package/Calendar/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -26,16 +26,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Calendar provides an API for building calendar data structures. Using
-the simple iterator and it's "query" API, a user interface can easily be
-built on top of the calendar data structure, at the same time easily
-connecting it to some kind of underlying data store, where "event"
-information is being held.
+the simple iterator and it's "query" API, a user interface can easily
+be built on top of the calendar data structure, at the same time
+easily connecting it to some kind of underlying data store, where
+"event" information is being held.
 
 It provides different calculation "engines" the default being based on
-Unix timestamps (offering fastest performance) with an alternative using
-PEAR::Date which extends the calendar past the limitations of Unix
-timestamps. Other engines should be implementable for other types of
-calendar (e.g. a Chinese Calendar based on lunar cycles).
+Unix timestamps (offering fastest performance) with an alternative
+using PEAR::Date which extends the calendar past the limitations of
+Unix timestamps. Other engines should be implementable for other types
+of calendar (e.g. a Chinese Calendar based on lunar cycles).
 
 In PEAR status of this package is: %{_status}.
 
@@ -59,8 +59,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
