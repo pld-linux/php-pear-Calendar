@@ -2,12 +2,11 @@
 %define		_class		Calendar
 %define		_status		beta
 %define		_pearname	%{_class}
-
 Summary:	%{_pearname} - building calendar data structures (irrespective of output)
 Summary(pl.UTF-8):	%{_pearname} - tworzenie struktur danych kalendarza (niezależne od wyjścia)
 Name:		php-pear-%{_pearname}
 Version:	0.5.5
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -18,6 +17,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.0.5
 Requires:	php-pear
+Suggests:	php-pear-Date
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
