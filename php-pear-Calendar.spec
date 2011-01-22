@@ -1,12 +1,12 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Calendar
 %define		_status		beta
-%define		_pearname	%{_class}
+%define		_pearname	Calendar
 Summary:	%{_pearname} - building calendar data structures (irrespective of output)
 Summary(pl.UTF-8):	%{_pearname} - tworzenie struktur danych kalendarza (niezależne od wyjścia)
 Name:		php-pear-%{_pearname}
 Version:	0.5.5
-Release:	2
+Release:	3
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -18,11 +18,12 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.0.5
 Requires:	php-pear
 Suggests:	php-pear-Date
+Obsoletes:	php-pear-Calendar-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude optional dependencies
-%define		_noautoreq	'pear(Date/Calc.php)'
+%define		_noautoreq	pear(Date/Calc.php)
 
 %description
 Calendar provides an API for building calendar data structures. Using
@@ -54,20 +55,6 @@ kalendarzy (np. kalendarza chińskiego opartego na fazach księżyca).
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -90,8 +77,4 @@ fi
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
+%{php_pear_dir}/Calendar
