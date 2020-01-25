@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		Calendar
 %define		_status		beta
 %define		_pearname	Calendar
